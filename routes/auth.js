@@ -6,7 +6,7 @@ const authController = require('../controllers/authController')
 
 
 // Crea un usuario
-// api/usuarios
+// api/auth
 router.post('/', 
 [
     
