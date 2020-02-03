@@ -30,6 +30,7 @@ exports.crearProyecto = async (req, res) => {
 exports.obtenerProyectos = async (req, res) => {
     try {
         const proyectos = await Proyecto.find({creador: req.usuario.id});
+        
         res.json({ proyectos }).sort({creado: -1});
     } catch (error) {
         console.log(error);
