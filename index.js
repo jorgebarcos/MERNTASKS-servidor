@@ -12,18 +12,18 @@ conectarDB();
 app.use(cors());
 
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://merntasks.netlify.com/"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "https://merntasks.netlify.com/"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
 
 
 // Habilitar express.json
 app.use(express.json({ extended: true}));
 
 // Puerto de la app
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 
 // importar rutas
